@@ -49,4 +49,6 @@ But we could create a solution that is agent-agnostic, which can then be used wi
 
 ## Docs
 
-https://www.claude.com/blog/skills
+- https://www.claude.com/blog/skills
+- https://code.claude.com/docs/en/sub-agents
+- https://code.claude.com/docs/en/mcp
