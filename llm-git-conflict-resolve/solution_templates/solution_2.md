@@ -53,11 +53,3 @@ When the agent is tasked with fixing a merge conflict, the expected execution fl
 4.  **Logic Synthesis:** The agent compares the three versions. Instead of guessing based on conflict markers, it reconstructs the valid code path based on the logic defined in the instructions.
 5.  **Application:** The agent rewrites the file content locally.
 6.  **Verification:** The agent executes `python git_tools.py --verify <filename>` to catch syntax errors.
-
-## Integration
-
-To add this skill to your agent configuration:
-
-1.  Place `git_tools.py` in the root or a dedicated `scripts/` directory.
-2.  Add the content of `instructions.md` to the agent's context or system prompt.
-3.  Ensure the agent has permission to execute shell commands (specifically `python` and `git`).
