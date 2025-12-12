@@ -4,8 +4,8 @@
 # Conflict: Price Update (Local) vs Stock Check (Remote)
 
 # 1. Create directory
-mkdir -p playground-2
-cd playground-2
+mkdir -p conflict-logic-merge
+cd conflict-logic-merge
 
 # 2. Initialize git quietly
 git init -q
@@ -87,7 +87,7 @@ git commit -a -q -m "Policy Update: Increase price limit to $150"
 git merge feature-stock --no-edit > /dev/null 2>&1 || true
 
 echo "=================================="
-echo "Playground 2 Ready (Logic Conflict)"
-echo "Folder: playground-2/"
-echo "To start: cd playground-2 && gemini"
+echo "Conflicted Repo Ready (Logic Conflict)"
+echo "Folder: conflict-logic-merge/"
+echo "To start: cd conflict-logic-merge && gemini"
 echo "=================================="

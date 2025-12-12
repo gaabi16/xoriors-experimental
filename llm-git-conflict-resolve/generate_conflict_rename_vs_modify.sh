@@ -3,8 +3,8 @@
 # Setup script for Git merge conflict demo (Scenario: Rename vs Modify)
 
 # 1. Create directory
-mkdir -p playground
-cd playground
+mkdir -p conflict-rename-vs-modify
+cd conflict-rename-vs-modify
 
 # 2. Initialize git quietly
 git init -q
@@ -100,7 +100,7 @@ git commit -a -q -m "Refactor: Rename functions"
 git merge feature --no-edit > /dev/null 2>&1 || true
 
 echo "=================================="
-echo "Playground 1 Ready (Rename vs Modify)"
-echo "Folder: playground/"
-echo "To start: cd playground && gemini"
+echo "Conflicted Repo Ready (Rename vs Modify)"
+echo "Folder: conflict-rename-vs-modify/"
+echo "To start: cd conflict-rename-vs-modify && gemini"
 echo "=================================="
