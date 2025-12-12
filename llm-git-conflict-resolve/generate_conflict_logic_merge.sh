@@ -52,7 +52,6 @@ def filter_products(products):
     """
     valid_products = []
     for p in products:
-        # Feature: Added stock check logic
         if p['price'] < 100 and p['in_stock'] is True:
             valid_products.append(p)
         else:
@@ -75,7 +74,6 @@ def filter_products(products):
     """
     valid_products = []
     for p in products:
-        # Master: Updated price limit to 150
         if p['price'] < 150:
             valid_products.append(p)
     return valid_products
