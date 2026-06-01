@@ -4,7 +4,10 @@ DIR_RENAME    = conflict-rename-vs-modify
 SCRIPT_LOGIC  = generate_conflict_logic_merge.sh
 DIR_LOGIC     = conflict-logic-merge
 
-.PHONY: all help rename logic clean
+SCRIPT_MULTI  = generate_conflict_multi_file.sh
+DIR_MULTI     = conflict-multi-file
+
+.PHONY: all help rename logic multi clean
 
 all: help
 
@@ -12,6 +15,7 @@ help:
 	@echo "Available targets:"
 	@echo "  make rename   - Generate Rename vs Modify conflicted repo"
 	@echo "  make logic    - Generate Logic Merge conflicted repo"
+	@echo "  make multi    - Generate Multi-file conflicted repo"
 	@echo "  make clean    - Remove generated directories"
 
 rename:
@@ -24,5 +28,10 @@ logic:
 	@chmod +x $(SCRIPT_LOGIC)
 	@./$(SCRIPT_LOGIC)
 
+multi:
+	@rm -rf $(DIR_MULTI)
+	@chmod +x $(SCRIPT_MULTI)
+	@./$(SCRIPT_MULTI)
+
 clean:
-	@rm -rf $(DIR_RENAME) $(DIR_LOGIC)
+	@rm -rf $(DIR_RENAME) $(DIR_LOGIC) $(DIR_MULTI)
